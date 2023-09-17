@@ -20,6 +20,7 @@ button {
 img {
   color: white;
   height: 20px;
+  cursor: pointer;
 }
 
 .dog {
@@ -39,7 +40,7 @@ input {
   height: 20px;
   border: none;
   border-radius: 25px;
-  background-color: lightgrey;
+  background-color: rgb(226,232,240,255);
 }
 
 .header {
@@ -120,7 +121,7 @@ h6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
-  margin: 15px;
+  margin: 0px 15px 15px 15px;
 }
 
 .main-content-main div {
@@ -148,7 +149,7 @@ h6 {
  
 .main-content-right {
   font-size: 12px;
-  margin: 15px 15px 15px 0;
+  margin: 0px 15px 15px 0;
 }
 
 .right-card,
@@ -162,10 +163,16 @@ h6 {
   display: flex;
   align-items: center;
   gap: 10px;
+  
+  margin-bottom: 15px;
 }
 
 .trending div div{
   display: block;
+}
+
+.trending div div p {
+  margin: 0;
 }
 
 
