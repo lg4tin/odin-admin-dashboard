@@ -1,7 +1,7 @@
 body {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: clamp(300px, 1fr, 600px) 4fr;
   margin: 0;
   font-family: arial;
 }
@@ -15,6 +15,23 @@ button {
   cursor: pointer;
   height: 30px;
   font-weight: bold;
+}
+
+img {
+  color: white;
+  height: 20px;
+}
+
+.dog {
+  height: 60px;
+  width: 60px;;
+  border-radius: 100px;
+}
+
+.dog2 {
+  height: 40px;
+  width: 40px;
+  border-radius: 60px;;
 }
 
 input {
@@ -31,6 +48,7 @@ input {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 10px;
 }
 
 .header div {
@@ -49,7 +67,7 @@ input {
   display: block;
 }
 
-h4, 
+h3, 
 h6 {
   margin: 8px;
 }
@@ -82,7 +100,7 @@ h6 {
 }
 
 .main-content {
-  background-color: lightgrey;
+  background-color: rgb(226,232,240,255);
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -93,13 +111,61 @@ h6 {
   grid-area: 1 / 1 / 2 / 3;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
+  padding: 0px 15px;
 }
 
 .main-content-main {
-  font-size: 12px;;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 15px;
 }
 
-.main-content-right {
-  background-color: green;
+.main-content-main div {
+  background-color: white;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(left, #88c7ff, #88c7ff 2%, transparent 2%, transparent 100%);
 }
+
+.main-content-main div p,
+.right-card div p {
+  color: grey;
+}
+
+.main-content-main p,
+.main-content-main h4 {
+  margin: 20px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  padding: 15px;
+}
+ 
+.main-content-right {
+  font-size: 12px;
+  margin: 15px 15px 15px 0;
+}
+
+.right-card,
+.trending {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.trending div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trending div div{
+  display: block;
+}
+
+
