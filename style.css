@@ -26,7 +26,7 @@ input {
 }
 
 .header {
-  background-color: whitesmoke;
+  background-color: white;
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -36,6 +36,13 @@ input {
 .header div {
   display: flex;
   gap: 20px;
+}
+
+.input,
+.hi-there {
+  align-items: center;
+  justify-content: start;
+  padding-left: 25px;
 }
 
 .hi-there div{
@@ -48,8 +55,7 @@ h6 {
 }
 
 .buttons,
-.name,
-.input {
+.name{
   align-items: center;
   justify-content: center;
 }
@@ -78,4 +84,22 @@ h6 {
 .main-content {
   background-color: lightgrey;
   grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 10fr;
+}
+
+.main-content-header {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.main-content-main {
+  font-size: 12px;;
+}
+
+.main-content-right {
+  background-color: green;
 }
